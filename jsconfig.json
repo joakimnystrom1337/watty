@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "jsx": "react",
+        "paths": {
+            "@atoms/*": [
+                "/components/Atoms/*"
+            ],
+            "@molecules/*": [
+                "/Components/Molecules/*"
+            ],
+            "@organisms/*": [
+                "/Components/Organisms/*"
+            ],
+            "@components/*": [
+                "/Components/*"
+            ]
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
