@@ -1,0 +1,19 @@
+.root{
+    transition: all 200ms;
+    background-color: #305080;
+    font-size: 20px;
+    min-width: 200px;;
+    border: none;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 30px;;
+    margin: 10px auto;
+    cursor: pointer;
+}
+.root:hover{
+    background-color: #365e99;
+}
+.root:active{
+    transition: all 100ms;
+    background-color: #3e6db4;
+}

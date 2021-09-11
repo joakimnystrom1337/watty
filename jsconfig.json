@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "allowSyntheticDefaultImports": false,
         "baseUrl": "./src",
         "jsx": "react",
         "paths": {
@@ -17,6 +18,9 @@
             ]
         }
     },
+    "include": [
+        "src/**/*"
+    ],
     "exclude": [
         "node_modules",
         "dist"

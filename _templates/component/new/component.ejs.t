@@ -6,7 +6,7 @@ import React from 'react';
 
 export const <%= name %> = ({
   ...props
-} => {
+}) => {
   return (
     <div {...props} >
       <%= name %>

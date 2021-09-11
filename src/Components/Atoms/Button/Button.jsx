@@ -1,12 +1,13 @@
 import React from 'react';
-
-
+import styles from './Button.module.css'
 export const Button = ({
+  children,
+  onClick,
   ...props
-} => {
+}) => {
   return (
-    <div {...props} >
-      Button
-    </div>
+    <button className={styles.root} type="button" onClick={onClick} {...props} >
+      {children}
+    </button>
   );
 };
