@@ -1,3 +1,9 @@
 .main{
     margin-top: 20px
 }
+.label{
+    color: rgb(181, 210, 255)
+}
+.label strong{
+    color: #ffffff
+}

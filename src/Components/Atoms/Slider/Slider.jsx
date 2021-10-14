@@ -11,8 +11,8 @@ export const Slider = ({
 }) => {
   return (
     <div className={styles.main}>
-      <label>{label} <strong>{value}%</strong></label>
-      <RcSlider value={value} step={10} onChange={onChange}/>
+      <label className={styles.label}>{label} <strong>{value}%</strong></label>
+      <RcSlider value={value} step={5} min={5 } onChange={onChange}/>
     </div>
   );
 };
