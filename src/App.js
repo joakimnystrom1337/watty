@@ -1,9 +1,9 @@
+import { useState } from 'react';
 import './App.css';
 import logo from './icons/logo.svg'
-import {Button} from '@atoms/Button/Button';
-import Slider from 'Components/Atoms/Slider';
-import { useState } from 'react';
-import Select from 'Components/Atoms/Select';
+import Slider from '@atoms/Slider';
+import Select from '@atoms/Select';
+import { calculateCharge } from './helpers/calculateCharge';
 
 const initialState = {
   beforeCharge: 50,
@@ -11,11 +11,13 @@ const initialState = {
   type: '64'
 }
 
-const calculateCharge = ({beforeCharge,
-  afterCharge,
-  battery}) =>{
-    return Math.floor(battery - (beforeCharge/afterCharge * battery))
+const ChargeSum = ({ values }) => {
+  if (!values.battery) {
+    return <p>Välj batteri!</p>
   }
+  return <p> <strong>{calculateCharge(values)}</strong> kW</p> 
+}
+
 function App() {
   const [formState, setFormState] = useState(initialState)
   return (
@@ -27,8 +29,7 @@ function App() {
       <Slider onChange={val => setFormState({...formState, beforeCharge: val})} value={formState.beforeCharge} label={`Batteri innan laddning`}/>
       <Slider onChange={val => setFormState({...formState, afterCharge: val})} value={formState.afterCharge} label={`Batteri efter laddning`}/>
       <Select onChange={val => setFormState({...formState, type: val})} value={formState.type}/>
-      
-        {calculateCharge({afterCharge: 100,beforeCharge: 90 ,battery: 64})}
+      <ChargeSum values={{...formState, battery: formState.type.value}}/>
       </div>
     </div>
   );
