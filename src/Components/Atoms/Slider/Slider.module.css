@@ -1,9 +1,12 @@
-.main{
-    margin-top: 20px
+.main {
+    margin-top: 20px;
 }
-.label{
-    color: rgb(181, 210, 255)
+.label {
+    color: rgb(181, 210, 255);
 }
-.label strong{
-    color: #ffffff
+.label strong {
+    color: #ffffff;
+    width: 3em;
+    text-align: right;
+    display: inline-block;
 }
