@@ -55,7 +55,7 @@ function App() {
                     options={[
                         { value: '64', label: '64 kWh' },
                         { value: '24 ', label: '24 kWh' },
-                        { value: '16.5 ', label: '16.5 kWh' },
+                        { value: '15.6 ', label: '15.6 kWh' },
                     ]}
                 />
                 <ChargeSum
