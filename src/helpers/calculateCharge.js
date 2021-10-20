@@ -1,3 +1,3 @@
 export const calculateCharge = ({ beforeCharge, afterCharge, battery }) => {
-  return Math.round(((afterCharge - beforeCharge) / 100 * battery))
-};
+    return (((afterCharge - beforeCharge) / 100) * battery).toFixed(1)
+}
