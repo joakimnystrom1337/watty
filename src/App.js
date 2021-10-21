@@ -54,6 +54,7 @@ function App() {
                     value={formState.type}
                     options={[
                         { value: '64', label: '64 kWh' },
+                        { value: '40 ', label: '40 kWh' },
                         { value: '24 ', label: '24 kWh' },
                         { value: '15.6 ', label: '15.6 kWh' },
                     ]}
